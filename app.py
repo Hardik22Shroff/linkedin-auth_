@@ -25,7 +25,8 @@ def login():
         f"response_type=code&"
         f"client_id={CLIENT_ID}&"
         f"redirect_uri={REDIRECT_URI}&"
-        f"scope=r_liteprofile%20r_emailaddress%20w_member_social"
+        f"scope=r_liteprofile%20r_emailaddress%20w_member_social&"
+        f"state=RANDOM_STRING"
     )
     return redirect(auth_url)
 
